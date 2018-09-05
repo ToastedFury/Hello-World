@@ -10,18 +10,17 @@ Dated: -->
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <!-- Bootstrap Css -->
-  <!-- <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"> -->
-  <!-- <link rel="stylesheet" href="Style/styles.css"> -->
-  <!-- Title of the webpage -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
   <title>Itadakimasu</title>
 <script type="text/javascript" src="bundle.js"></script></head>
 
 <body>
   <!-- This is the navigation bar -->
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light fixed-top">
+    <!--navbar-light -->
     <div class="container">
-      <a class="navbar-brand" href="#"><img src="images/rice-bowl.png" alt="The rice bowl logo" style="width:20px; height:30px;"></a>
+      <a class="navbar-brand" href="#"><img src="images/rice-bowl.png" alt="The rice bowl logo" style="width:50px; height:50px;"></a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
         aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -34,22 +33,21 @@ Dated: -->
             <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#">Link</a>
+            <a class="nav-link" href="#map">Contact</a>
           </li>
           <li class="nav-item dropdown">
             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true"
               aria-expanded="false">
-              Dropdown
+              Table of Contents
             </a>
             <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-              <a class="dropdown-item" href="#">Action</a>
-              <a class="dropdown-item" href="#">Another action</a>
+              <a class="dropdown-item" href="#aboutus">About</a>
+              <a class="dropdown-item" href="#Vision">Vision</a>
+              <a class="dropdown-item" href="#Video">Chef's Kitchen</a>
+              <a class="dropdown-item" href="#carouselSection">Featured Dishes</a>
               <div class="dropdown-divider"></div>
-              <a class="dropdown-item" href="#">Something else here</a>
+              <a class="dropdown-item" href="#cardSection">Menu</a>
             </div>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link disabled" href="#">Disabled</a>
           </li>
         </ul>
       </div>
@@ -60,103 +58,155 @@ Dated: -->
   <section class="heroSection-full-bg">
     <div class="jumbotron jumbotron-fluid">
       <div class="container">
-        <h1 lang="ja-jp" class="display-3">いただきます</h1>
-        <p class="lead">"An expression of Gratitude before meals."</p>
+        <!-- <h4 class="display-4">ITADAKIMASU</h4> -->
+        <div data-toggle="tooltip" title="Itadakimasu" data-placement="top"><h2 lang="ja-jp" class="display-1 text-light">いただきます</h2></div>
+        <blockquote>"An expression of Gratitude before meals."</blockquote>
         <hr class="my-4">
         <p class="lead">
-          <button class="btn btn-primary btn-lg" data-toggle="modal" data-target="#reservationModal">Reservation</button>
+          <button class="btn btn-danger btn-lg" data-toggle="modal" data-target="#reservationModal">Reservation</button>
         </p>
       </div>
     </div>
-
+  </section>
   <!-- Modal -->
-  <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModalLabel" aria-hidden="true">
+  <div class="modal fade" id="reservationModal" tabindex="-1" role="dialog" aria-labelledby="reservationModal" aria-hidden="true">
     <div class="modal-dialog" role="document">
       <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title" id="reservationModalLabel">Make your Reservation</h5>
-          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-header text-center">
+          <h4 class="modal-title w-100 font-weight-bold">Make a Reservation</h4>
+          <button type="button" class="btn-danger close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">&times;</span>
           </button>
         </div>
-        <div class="modal-body">
+        <div class="modal-body mx-3">
+          <div class="md-form mb-5">
+            <i class="fa fa-address-book prefix grey-text"></i>
+            <input type="email" id="defaultForm-email" class="form-control validate" placeholder="Name">
+            <label data-error="wrong" data-success="right"></label>
+          </div>
+
+          <div class="md-form mb-4">
+            <i class="fa fa-phone prefix grey-text"></i>
+            <input type="password" id="defaultForm-pass" class="form-control validate" placeholder="Phone Number">
+            <label data-error="wrong" data-success="right"></label>
+          </div>
 
         </div>
-        <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
-          <button type="button" class="btn btn-primary" data-dismiss="modal">Confirm</button>
+        <div class="modal-footer d-flex justify-content-center">
+          <button class="btn btn-danger" data-dismiss="modal">Confirm</button>
         </div>
       </div>
     </div>
   </div>
-</section>
-  <!-- this is a section -->
-  <section id="feature-one">
+  <!-- About Us section -->
+  <section class="container-fluid" id="aboutus">
     <div class="container">
       <div class="row">
-        <div class="feature-content">
-          <div class="col-lg-6">
-            <iframe width="100%" height="315" src="https://www.youtube.com/embed/EizSoy7Ztto" frameborder="0" allowfullscreen></iframe>
-          </div>
-          <div class="col-lg-5 col-lg-offset-1">
-            <h6>Watch this</h6>
-            <h2>Witness the power of Startup.logo in this acapella video</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laboriosam quia aliquam, error doloribus?</p>
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. In, excepturi. Officiis corporis facilis ducimus
-              assumenda modi, tenetur, dolorum quis similique, qui, ad dignissimos maiores hic. Explicabo harum, provident
-              autem. Ratione.</p>
-          </div>
+        <div class="col-sm-6">
+          <img class="d-block w-100" src="images/AboutUS.jpg" alt="Second slide">
+        </div>
+        <div class="col-sm-6 textBox">
+          <h6 class="text-light">About us</h6>
+          <h2 class="text-danger" lang="ja-jp">私たちに関しては</h2>
+          <p class="lead text-light">Where it all began?</p>
+          <p class="text-secondary">Our founder, Charlie Doe, had an idea to create a restaurant that was more than a place
+            that served great food. Charlie wanted to give locals a place where they'd always feel at home. A place where
+            they could get no-nonsense food at down-to-earth prices, and where they'd be treated right by people who had
+            a passion to serve.
         </div>
       </div>
     </div>
   </section>
-  <section id="feature-two" class="feature-dark">
+  <section class="container-fluid" id="Vision">
     <div class="container">
       <div class="row">
-        <div class="feature-content">
-          <div class="col-lg-6 feature-caption">
-            <h6>Incredible feature</h6>
-            <h2>Totally random websites. At the touch of your finger pads.</h2>
-            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Cum tempora eum vel earum, minima perspiciatis,
-              nulla, voluptatibus dolor facilis cumque quasi animi sed ex perferendis qui. Blanditiis debitis, aut vel.</p>
-            <a href="" role="button" class="btn btn-secondary-outline btn-lg">Get in on the action</a>
-          </div>
-          <div class="col-lg-6 text-sm-center hidden-md-down">
-            <!-- screenshot: http://www.staggeringbeauty.com/ -->
-            <img src="..." alt="food">
-          </div>
+        <div class="col-sm-6 textBox">
+          <h6>Our Vision</h6>
+          <h2 lang="ja-jp" class="text-danger">ビジョン</h2>
+          <p class="lead">Never pretentious. Always satisfying</p>
+          <p>We're loved for our hand-breaded Boneless Buffalo Wings, our signature Broiled Sirloin Tips, our famous tall,
+            frosted mugs of beer and more. All are served in a distinctly hearty New England style, enjoyed over good times
+            with great family and friends. Simple, honest, genuine food. </p>
+        </div>
+        <div class="col-sm-6">
+          <img class="d-block w-100" src="images/Mission.jpg" alt="Second slide">
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="container-fluid" id="Video">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6">
+          <iframe style="width:100%; height:450px" src="https://www.youtube.com/embed/EizSoy7Ztto" allowfullscreen></iframe>
+        </div>
+        <div class="col-sm-6 textBox">
+          <h6 class="text-light">Chef's Kitchen</h6>
+          <h2 lang="ja-jp" class="text-danger">チーフキッチン</h2>
+          <p class="lead text-light">A little Sneak Peak into the Chef's culinary world</p>
+          <p class="text-secondary">We use the most pristine utensils to cook our food in, the finest ingredients all wholesome
+            and fresh.This is what keeps us apart from the others.</p>
+          <p class="text-secondary">Every step of the food-making process is fun filled and cumbersome at the same time,
+            but every element on the plate contains all the love the chef puts into the dish</p>
         </div>
       </div>
     </div>
   </section>
   <!-- This is a carousel section -->
-  <section id=carousel>
+  <section class="container text-center" id="carouselSection">
+    <h4>Chef's Special</h4>
+    <h2 lang="ja-jp" class="display-3 text-danger">シェフのスペシャル</h2>
+    <p class="lead">Gauranteed to give your taste buds a tingle!</p>
+    <p>Some of the customer favourites and Chef's favourites all in one slideshow, Ever the temptation. Have a bite and we
+      assure you that heaven is in the same dimension</p>
     <div id="carouselChefsPick" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
         <li data-target="#carouselChefsPick" data-slide-to="0" class="active"></li>
         <li data-target="#carouselChefsPick" data-slide-to="1"></li>
         <li data-target="#carouselChefsPick" data-slide-to="2"></li>
+        <li data-target="#carouselChefsPick" data-slide-to="3"></li>
+        <li data-target="#carouselChefsPick" data-slide-to="4"></li>
+        <li data-target="#carouselChefsPick" data-slide-to="5"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <div class="item carousel-item active">
-          <img class="d-block w-100" src="images/ramen2Hero.jpg" alt="First slide">
+          <img class="d-block w-100" src="images/carousalMain.jpeg" alt="Chef's Special">
           <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
           </div>
         </div>
         <div class="item carousel-item">
-          <img class="d-block w-100" src="images/ramenHero.jpg" alt="Second slide">
+          <img class="d-block w-100" src="images/carouselDango.jpeg" alt="Dango">
           <div class="carousel-caption d-none d-md-block">
-            <h5>Whaaaaaat?</h5>
-            <p>...</p>
+            <h1 class="text-danger font-weight-bold">Dango</h1>
+            <p>Drippy syrupy dessert, A sure-fire people pleaser</p>
           </div>
         </div>
         <div class="item carousel-item">
-          <img class="d-block w-100" src="..." alt="Third slide">
+          <img class="d-block w-100" src="images/carouselSushi.jpg" alt="Sushi">
           <div class="carousel-caption d-none d-md-block">
-            <h5>...</h5>
-            <p>...</p>
+            <h1 class="text-danger font-weight-bold">Sushi</h1>
+            <p>Sticky rice wrapped in sea weed sheets called nori</p>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <img class="d-block w-100" src="images/carouselPrawnTempura.jpg" alt="Prawn Tempura">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="text-danger font-weight-bold">Prawn Tempura</h1>
+            <p>A delicacy made with prawns and spicy breadcrumb batter</p>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <img class="d-block w-100" src="images/carouselSashimi.jpg" alt="Sashimi">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="text-danger font-weight-bold">Sashimi</h1>
+            <p>Finely julliened raw fish with a touch of soy sauce on the side</p>
+          </div>
+        </div>
+        <div class="item carousel-item">
+          <img class="d-block w-100" src="images/carouselSukiyaki.jpg" alt="Sukiyaki">
+          <div class="carousel-caption d-none d-md-block">
+            <h1 class="text-danger font-weight-bold">Sukiyaki</h1>
+            <p>A platter of everything for a foodie</p>
           </div>
         </div>
       </div>
@@ -170,47 +220,126 @@ Dated: -->
       </a>
     </div>
   </section>
-  <div class="album text-muted">
-    <div class="container">
-
-      <div class="row">
-        <div class="card">
-          <img src="images/" alt="Guitar">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-            This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img src="img/lady-guitar.jpg" alt="A woman playing a guitar">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-            This content is a little bit longer.</p>
-        </div>
-        <div class="card">
-          <img src="img/mic.jpg" alt="Microphone">
-          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content.
-            This content is a little bit longer.</p>
+  <!-- This is the cards section for menu items -->
+  <div class="container-fluid text-center" id="cardSection">
+    <h1 lang="ja-jp" class="display-3">メニュー</h1>
+    <h4>Menu</h4>
+    <div class="container-fluid">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-6 col-md-4 mx-auto">
+            <div class="card">
+              <img class="card-img-top" src="images/soup.jpg" alt="soup">
+              <div class="card-body text-center">
+                <h5 class="card-title">Soups</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+                <a href="#" class="btn btn-danger">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mx-auto">
+            <div class="card">
+              <img class="card-img-top" src="images/starters.jpg" alt="starters">
+              <div class="card-body text-center">
+                <h5 class="card-title">Starters</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+                <a href="#" class="btn btn-danger">View</a>
+              </div>
+            </div>
+          </div>
+          <div class="col-sm-6 col-md-4 mx-auto">
+            <div class="card">
+              <img class="card-img-top" src="images/mains.jpg" alt="Mains">
+              <div class="card-body text-center">
+                <h5 class="card-title">Main dishes</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                  content.
+                </p>
+                <a href="#" class="btn btn-danger">View</a>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
-
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="card">
+            <img class="card-img-top" src="images/salad.jpg" alt="Salads">
+            <div class="card-body text-center">
+              <h5 class="card-title">Salad</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+              </p>
+              <a href="#" class="btn btn-danger">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="card">
+            <img class="card-img-top" src="images/drinks.jpg" alt="Drink">
+            <div class="card-body text-center">
+              <h5 class="card-title">Refreshments</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+              </p>
+              <a href="#" class="btn btn-danger">View</a>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-6 col-md-4 mx-auto">
+          <div class="card">
+            <img class="card-img-top" src="images/desserts.jpg" alt="Desserts">
+            <div class="card-body text-center">
+              <h5 class="card-title">Desserts</h5>
+              <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's
+                content.
+              </p>
+              <a href="#" class="btn btn-danger">View</a>
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
-
-  <footer class="text-muted">
-    <div class="container">
-      <p class="pull-xs-right">
-        <a href="#">Back to top</a>
-      </p>
-      <p>Album example is &copy; Bootstrap, but please download and customize it for yourself!</p>
-      <p>New to Bootstrap? <a href="../../">Visit the homepage</a> or read our <a href="../../getting-started/">getting started
-          guide</a>.</p>
+  <!-- The map section -->
+  <!-- <div class="container" id="mapper"> -->
+  <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d15554.276835888708!2d77.6139401!3d12.9353863!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x48d008360cebcde4!2sStackroute!5e0!3m2!1sen!2sin!4v1536121777455"
+    id="map" allowfullscreen></iframe>
+  <!-- </div> -->
+  <!-- The footer section -->
+  <footer class="container-fluid text-muted" id="footer">
+    <div class="container ">
+      <div class="row">
+        <div class="col-sm text-center">
+          <p class="text-danger"><a href="#" class="font-weight-bold text-danger nounderline">Check</a> out our upcoming events!</p>
+        </div>
+        <div class="col-sm text-center ">
+          <i class="fa fa-twitter prefix fa-2x text-danger"></i>
+          <i class="fa fa-linkedin prefix fa-2x text-danger"></i>
+          <i class="fa fa-facebook prefix fa-2x text-danger"></i>
+          <i class="fa fa-rss prefix fa-2x text-danger"></i>
+        </div>
+        <div class="col-sm text-center text-danger">
+          Thank you for visiting us!
+        </div>
+      </div>
     </div>
   </footer>
 
   <!-- jQuery, Then BootStrap Js -->
-  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js"></script>
-  <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
-  <script src=> </script>
+
+  <!-- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBu-916DdpKAjTmJNIgngS6HL_kDIKU0aU&callback=myMap"></script> -->
+  <script>
+      $(document).ready(function(){
+          $('[data-toggle="tooltip"]').tooltip(); 
+      });
+  </script>
 </body>
 
 </html>
